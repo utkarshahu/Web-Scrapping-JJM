@@ -1,0 +1,26 @@
+# Environment
+.env
+
+# Virtual Environment
+.venv/
+venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Generated Files
+drains_stp_hierarchical.json
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+
+# Mac
+.DS_Store

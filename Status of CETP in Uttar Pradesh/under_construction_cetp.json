@@ -1,0 +1,197 @@
+[
+    {
+        "sr_no": "1",
+        "project_name": "2",
+        "nodal_agency": "3",
+        "executive_agency": "4",
+        "contractor": "5",
+        "date_of_sanction": "6",
+        "date_of_start": "7",
+        "date_of_completion": "8",
+        "sanction_cost_cr": "9",
+        "agreement_cost_cr": "10",
+        "physical_progress_percent": "11",
+        "financial_progress_cr": "12",
+        "date_of_updation": "18",
+        "remarks": "19",
+        "components": [
+            {
+                "work_component": "13",
+                "technology": "14",
+                "capacity_length_no": "15",
+                "physical_progress_percent": "16",
+                "photos": "17"
+            }
+        ]
+    },
+    {
+        "sr_no": "1",
+        "project_name": "Construction of 7.5 MLD CETP at GIDA, Gorakhpur",
+        "nodal_agency": "NMCG",
+        "executive_agency": "M/S GIDA CETP Foundation",
+        "contractor": "--",
+        "date_of_sanction": "11-Jan-2022",
+        "date_of_start": "",
+        "date_of_completion": "",
+        "sanction_cost_cr": "93.52",
+        "agreement_cost_cr": "0.00",
+        "physical_progress_percent": "+0 2.40",
+        "financial_progress_cr": "+0 2.50",
+        "date_of_updation": "29-Aug-2025",
+        "remarks": "4 MLD CETP DPR Preparation complete.",
+        "components": [
+            {
+                "work_component": "4",
+                "technology": "6",
+                "capacity_length_no": "5.00",
+                "physical_progress_percent": "1.80",
+                "photos": "4"
+            },
+            {
+                "work_component": "OHT",
+                "technology": "No",
+                "capacity_length_no": "515.00",
+                "physical_progress_percent": "1.90",
+                "photos": "0"
+            },
+            {
+                "work_component": "Work Component",
+                "technology": "Technology",
+                "capacity_length_no": "214.00",
+                "physical_progress_percent": "1.20",
+                "photos": "6"
+            }
+        ]
+    },
+    {
+        "sr_no": "2",
+        "project_name": "Upgrdation of 4.5 MLD CETP at Banther , Unnao",
+        "nodal_agency": "NMCG",
+        "executive_agency": "Banther Industrial Pollution Control company",
+        "contractor": "M/S EMS infracon",
+        "date_of_sanction": "21-Feb-2020",
+        "date_of_start": "07-Feb-2022",
+        "date_of_completion": "31-Jul-2025",
+        "sanction_cost_cr": "108.96",
+        "agreement_cost_cr": "111.96",
+        "physical_progress_percent": "+0 10.00",
+        "financial_progress_cr": "+0 11.00",
+        "date_of_updation": "29-Aug-2025",
+        "remarks": "Work Under Progress",
+        "components": [
+            {
+                "work_component": "1",
+                "technology": "3",
+                "capacity_length_no": "2.00",
+                "physical_progress_percent": "9.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "Collection and conveyance system",
+                "technology": "Pumping",
+                "capacity_length_no": "4.00",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "Common chrome recovery unit",
+                "technology": "MGO Dosing",
+                "capacity_length_no": "0.50",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "Composite  Stream",
+                "technology": "SBR",
+                "capacity_length_no": "2.80",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "over head tank",
+                "technology": "OHT",
+                "capacity_length_no": "1200.00",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "Soak Stream",
+                "technology": "SBR",
+                "capacity_length_no": "1.20",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            }
+        ]
+    },
+    {
+        "sr_no": "3",
+        "project_name": "Construction of 20 MLD CETP at Jajmau Kanpur",
+        "nodal_agency": "NMCG",
+        "executive_agency": "Jajamau Tanners and effluent treatment",
+        "contractor": "Va Tech Wabag",
+        "date_of_sanction": "11-Feb-2019",
+        "date_of_start": "11-Apr-2019",
+        "date_of_completion": "01-Apr-2024",
+        "sanction_cost_cr": "617.00",
+        "agreement_cost_cr": "520.14",
+        "physical_progress_percent": "+0 94.00",
+        "financial_progress_cr": "+0 353.00",
+        "date_of_updation": "",
+        "remarks": "CETP is operational and complaint. 151 tanneries have been connected to piping network out of total 340 tanneries.All 340 tannery connnection targeted to be completed by August 25",
+        "components": [
+            {
+                "work_component": "C & C",
+                "technology": "Gravity & Pumping",
+                "capacity_length_no": "25.00",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "CCRU",
+                "technology": "Precipitation",
+                "capacity_length_no": "900.00",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "CETP",
+                "technology": "Activated sludge plant",
+                "capacity_length_no": "20.00",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            },
+            {
+                "work_component": "ZLD",
+                "technology": "UF+RO",
+                "capacity_length_no": "900.00",
+                "physical_progress_percent": "0.00",
+                "photos": "0"
+            }
+        ]
+    },
+    {
+        "sr_no": "4",
+        "project_name": "Upgradation of 2.15 MLD CETP to 2.15 MLD CETP at Unnnao",
+        "nodal_agency": "NMCG",
+        "executive_agency": "Unnao Tanners and pollution control company",
+        "contractor": "M/s JV UTIPL-Oasis-SIMA",
+        "date_of_sanction": "26-Jun-2022",
+        "date_of_start": "",
+        "date_of_completion": "",
+        "sanction_cost_cr": "127.00",
+        "agreement_cost_cr": "172.00",
+        "physical_progress_percent": "+0 0.00",
+        "financial_progress_cr": "+0 0.00",
+        "date_of_updation": "",
+        "remarks": "Agreement signing pending at level of SPV. In compliance of NMCG instructions SMCG -UP vide its letter dated 19/06/2025 has written to DM Unnao and MS UPPSB for doing necessary actions for agreement signing including action against defaulting tanneries.",
+        "components": [
+            {
+                "work_component": "",
+                "technology": "",
+                "capacity_length_no": "",
+                "physical_progress_percent": "",
+                "photos": ""
+            }
+        ]
+    }
+]

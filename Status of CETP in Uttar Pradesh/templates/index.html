@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+
+<title>
+Status of CETP in Uttar Pradesh Under Namami Gange Programme
+</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#fff;
+}
+
+.header{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.heading{
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.fetch-btn{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.last-update{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px;
+}
+
+.table-wrapper{
+    overflow:auto;
+    height:85vh;
+}
+
+table{
+    border-collapse:collapse;
+    width:100%;
+}
+
+thead{
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+    font-size:13px;
+    vertical-align:middle;
+}
+
+thead tr{
+    background:#f3d9bf;
+}
+
+.fy{
+    background:#eeffee;
+}
+
+.phy{
+    background:#d9ffd8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <button
+        class="fetch-btn"
+        onclick="fetchUpdatedData()">
+        Fetch Updated Data
+    </button>
+
+    <div class="heading">
+        Status of CETP in Uttar Pradesh Under Namami Gange Programme
+    </div>
+
+</div>
+
+<div
+    id="reportDate"
+    class="last-update">
+    Loading...
+</div>
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th rowspan="2">S No</th>
+<th rowspan="2">Project Name</th>
+<th rowspan="2">Nodal Agency</th>
+<th rowspan="2">Executive Agency</th>
+<th rowspan="2">Contractor / Firm Name</th>
+<th rowspan="2">Date of Sanction</th>
+<th rowspan="2">Date of Start</th>
+<th rowspan="2">Date of Completion</th>
+<th rowspan="2">Sanction Cost (Cr)</th>
+<th rowspan="2">Agreement Cost (Cr)</th>
+
+<th colspan="2" class="fy">
+Current Progress
+</th>
+
+<th colspan="5" class="phy">
+Component Wise Physical Progress
+</th>
+
+<th rowspan="2">
+Date of Updation
+</th>
+
+<th rowspan="2">
+Remarks
+</th>
+
+</tr>
+
+<tr>
+
+<th class="fy">
+Physical Progress %
+</th>
+
+<th class="fy">
+Financial Progress (Cr)
+</th>
+
+<th class="phy">
+Work Component
+</th>
+
+<th class="phy">
+Technology
+</th>
+
+<th class="phy">
+Capacity/Length/No
+</th>
+
+<th class="phy">
+Physical Progress %
+</th>
+
+<th class="phy">
+Photos
+</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tbody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+async function loadData(){
+
+    const response =
+        await fetch("/api/current");
+
+    const data =
+        await response.json();
+
+    let html = "";
+
+    let srNo = 1;
+
+    data.forEach((project)=>{
+
+        // Skip fake header row from scraper
+        if(
+            project.project_name === "2" &&
+            project.nodal_agency === "3"
+        ){
+            return;
+        }
+
+        const components =
+            project.components || [];
+
+        // No components available
+        if(components.length === 0){
+
+            html += `
+            <tr>
+
+                <td>${srNo++}</td>
+
+                <td>${project.project_name || ""}</td>
+
+                <td>${project.nodal_agency || ""}</td>
+
+                <td>${project.executive_agency || ""}</td>
+
+                <td>${project.contractor || ""}</td>
+
+                <td>${project.date_of_sanction || ""}</td>
+
+                <td>${project.date_of_start || ""}</td>
+
+                <td>${project.date_of_completion || ""}</td>
+
+                <td>${project.sanction_cost_cr || ""}</td>
+
+                <td>${project.agreement_cost_cr || ""}</td>
+
+                <td>${project.physical_progress_percent || ""}</td>
+
+                <td>${project.financial_progress_cr || ""}</td>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>${project.date_of_updation || ""}</td>
+
+                <td>${project.remarks || ""}</td>
+
+            </tr>
+            `;
+
+            return;
+        }
+
+        const rowspan =
+            components.length;
+
+        html += `
+        <tr>
+
+            <td rowspan="${rowspan}">
+                ${srNo++}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.project_name || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.nodal_agency || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.executive_agency || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.contractor || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.date_of_sanction || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.date_of_start || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.date_of_completion || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.sanction_cost_cr || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.agreement_cost_cr || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.physical_progress_percent || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.financial_progress_cr || ""}
+            </td>
+
+            <td>
+                ${components[0].work_component || ""}
+            </td>
+
+            <td>
+                ${components[0].technology || ""}
+            </td>
+
+            <td>
+                ${components[0].capacity_length_no || ""}
+            </td>
+
+            <td>
+                ${components[0].physical_progress_percent || ""}
+            </td>
+
+            <td>
+                ${components[0].photos || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.date_of_updation || ""}
+            </td>
+
+            <td rowspan="${rowspan}">
+                ${project.remarks || ""}
+            </td>
+
+        </tr>
+        `;
+
+        for(let i=1;i<components.length;i++){
+
+            const c = components[i];
+
+            html += `
+            <tr>
+
+                <td>${c.work_component || ""}</td>
+
+                <td>${c.technology || ""}</td>
+
+                <td>${c.capacity_length_no || ""}</td>
+
+                <td>${c.physical_progress_percent || ""}</td>
+
+                <td>${c.photos || ""}</td>
+
+            </tr>
+            `;
+        }
+
+    });
+
+    document.getElementById(
+        "tbody"
+    ).innerHTML = html;
+
+    const validProject =
+        data.find(
+            p => p.project_name !== "2"
+        );
+
+    if(validProject){
+
+        document.getElementById(
+            "reportDate"
+        ).innerHTML =
+        "Last Update Date : " +
+        (validProject.date_of_updation || "N/A");
+    }
+}
+
+async function fetchUpdatedData(){
+
+    const btn =
+        document.querySelector(".fetch-btn");
+
+    btn.disabled = true;
+    btn.innerText = "Fetching...";
+
+    try{
+
+        const response =
+            await fetch(
+                "/api/fetch-now",
+                {
+                    method:"POST"
+                }
+            );
+
+        console.log("STATUS =", response.status);
+
+        const result =
+            await response.json();
+
+        console.log(result);
+
+        alert(result.message);
+
+        await loadData();
+    }
+    catch(err){
+
+        console.error("ERROR =", err);
+
+        alert("Refresh Failed");
+    }
+    finally{
+
+        btn.disabled = false;
+
+        btn.innerText =
+            "Fetch Updated Data";
+    }
+}
+
+loadData();
+
+setInterval(
+    loadData,
+    10000
+);
+
+</script>
+
+</body>
+</html>

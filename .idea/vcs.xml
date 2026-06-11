@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Status of CETP in Uttar Pradesh" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Status of Sewage Treatment Plants (Existing STPs)" vcs="Git" />
   </component>
 </project>
